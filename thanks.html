@@ -1,0 +1,94 @@
+<?php require_once('common/config/config.inc.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thankyou</title>
+    <meta name="description" content="Vinove is one of the leading IT services firms offering IT services, software development and IT outsourcing services of any complexity to its clients across the globe." />
+    <meta name="keywords" content="it services, software, development, company, firm" />
+    <link rel="shortcut icon" href="images/small-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preload stylesheet" href="css/all.css?<?php echo time(); ?>" as="style">
+    <link rel="preload stylesheet" href="css/style.css?<?php echo time(); ?>" as="style">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="heder-inner">
+                <div class="logo">
+                    <a href="https://www.vinove.com">
+                        <picture>
+                            <source type="image/webp" srcset="images/logo.webp">
+                            <source type="image/png" srcset="images/logo.png">
+                            <img loading="lazy" width="400" height="114" src="images/logo.png"
+                                alt="Vinove Logo">
+                        </picture>                      
+                    </a>
+                </div>
+                <div class="push-left">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                      <span class="hamburger-line hamburger-line-top"></span>
+                      <span class="hamburger-line hamburger-line-middle"></span>
+                      <span class="hamburger-line hamburger-line-bottom"></span>
+                    </button>
+                    <div class="nav">
+                        <nav>
+                            <ul id="primary-menu" class="menu nav-menu">
+                                <!-- <li class="menu-item current-menu-item"><a href="/betasite/">Home</a></li> -->
+                                <li class="menu-item"><a href="/about-us">About Us</a></li>
+                                <li class="menu-item"><a href="/our-products-services">Our Products</a></li>
+                                <li class="menu-item"><a href="/careers">Careers</a></li>
+                                <li class="menu-item"><a href="/mindscape/">Blog</a></li>
+                                <li class="menu-item"><a href="/contact-us">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="thanks-section">
+        <div class="container">
+            <div class="thanks-inner">
+                <img src="images/thumbs-up-icon.webp" alt="Thumbs Up Icon">
+                <h2>Thank You!</h2>
+                <p>Your enquiry has been accepted and is now being routed to the appropriate member of our staff. <br>Thank you for your interest in our company.</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/Vinove"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/vinove_softwares"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/vinove"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/vinove/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                <div class="footer">
+                    <div class="footer-inner">
+                        <p>Copyright © <?php echo date("Y"); ?> Vinove. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php if( !isMobile() ) : ?>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <?php endif; ?>
+    <?php if( isMobile() ) : ?>
+    <script>
+    window.addEventListener('scroll', function() {
+    window.pageYOffset>10?document.querySelector(".header").classList.add("header-bg"):document.querySelector(".header").classList.remove("header-bg")
+    });    
+    document.getElementById('menu-toggler').onclick = function(){
+    if( document.querySelector("body").classList.contains("menu-active") ){
+       document.querySelector("body").classList.remove("menu-active");
+    }else{
+        document.querySelector("body").classList.add("menu-active");
+    }
+    }
+    </script>
+    <?php endif; ?>
+</body>
+</html>

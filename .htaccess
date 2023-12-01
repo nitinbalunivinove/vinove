@@ -1,0 +1,105 @@
+ErrorDocument 404 http://www.vinove.com/404.html
+RewriteEngine on
+RewriteBase /
+
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.vinove.com/$1 [R,L]
+#Redirect 301 /solutions http://www.vinove.com/about
+RewriteCond %{HTTP_HOST} ^vinove\.com [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule (.*) http://www.vinove.com/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^[a-zA-Z]{0,9}\ /index\.html\ HTTP/
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^index\.html$ http://www.vinove.com/ [R=301,L,QSA] 
+#for showing job id selected
+#RewriteRule ^career/([0-9]+)/?$ career.html?jobId=$1
+AddType application/x-httpd-lsphp .htm .html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ $1.html [L,QSA]
+#RewriteRule ^(.*)/$ $1.html [L,QSA]
+
+#Redirect 301 /contact/ http://www.vinove.com/contact.html
+Redirect 301 /about.php http://www.vinove.com/about-us
+Redirect 301 /about.html http://www.vinove.com/about-us
+Redirect 301 /people.php http://www.vinove.com/about-us
+Redirect 301 /contact-details.php http://www.vinove.com/contact-us
+Redirect 301 /contact.html http://www.vinove.com/contact-us
+
+Options +FollowSymlinks
+#Optimize / deflate the files for faster loading!
+# Netscape 4.x has some problems...
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+ 
+# Netscape 4.06-4.08 have some more problems
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+ 
+# MSIE masquerades as Netscape, but it is fine
+# BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+ 
+# NOTE: Due to a bug in mod_setenvif up to Apache 2.0.48
+# the above regex won't work. You can use the following
+# workaround to get the desired effect:
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+ 
+AddOutputFilterByType DEFLATE text/css application/x-javascript text/html text/plain text/xml
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+ # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Video
+  ExpiresByType video/webm "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
+
+#amend php settings for supporting large files
+php_value upload_max_filesize 32M
+php_value post_max_size 32M 
+php_value memory_limit 128M
+php_value max_execution_time 600
+
+# Ban directory browsing
+Options -Indexes
+IndexIgnore *
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php80” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php80 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

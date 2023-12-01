@@ -1,0 +1,634 @@
+<?php require_once('common/config/config.inc.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Company | Software Engineering Firm</title>
+    <meta name="description" content="Are you looking for the best software development company near me? We are an award winning Digital Consulting & Product Engineering Firm offering end-to-end software development solutions." />
+    <meta name="keywords" content="offshore, consulting, software, development, outsourcing, outsource, custom, bespoke, developers, company, services, Website, web, Application, programming, it services" />
+    <link rel="shortcut icon" href="images/small-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+    <?php if( !isMobile() ) : ?>
+    <link rel="preload stylesheet" href="css/owl.carousel.min.css" as="style" defer>
+    <?php endif; ?>
+    <link rel="preload stylesheet" href="css/all.css?<?php echo time(); ?>" as="style" defer>
+    <link rel="preload stylesheet" href="css/style.css?<?php echo time(); ?>" as="style" defer>
+    <?php if( !isMobile() ) : ?>
+    <link rel="preload stylesheet" href="css/fullpage.css?<?php echo time(); ?>" as="style" defer>
+    <?php endif; ?>
+
+    <?php if( isMobile() ) : ?>
+    <link rel="stylesheet" type="text/css" href="css/glider.min.css" />
+    <?php endif; ?>
+</head>
+<body class="homepge <?php echo ( isMobile() ) ? ' mobile-tpl' : ' desktop-tpl'; ?>">
+
+    <header class="header header-bg">
+        <div class="container">
+            <div class="heder-inner">
+                <div class="logo">
+                    <a href="https://www.vinove.com">
+                        <picture>
+                            <source type="image/webp" srcset="images/logo.webp">
+                            <source type="image/png" srcset="images/logo.png">
+                            <img loading="lazy" width="400" height="114" src="images/logo.png"
+                                alt="Vinove Logo">
+                        </picture>                    
+                    </a>
+                </div>
+                <div class="push-left">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                      <span class="hamburger-line hamburger-line-top"></span>
+                      <span class="hamburger-line hamburger-line-middle"></span>
+                      <span class="hamburger-line hamburger-line-bottom"></span>
+                    </button>
+                    <div class="nav">
+                        <nav>
+                            <ul id="primary-menu" class="menu nav-menu">
+                                <!-- <li class="menu-item current-menu-item"><a href="/betasite/">Home</a></li> -->
+                                <li class="menu-item"><a href="/about-us">About Us</a></li>
+                                <li class="menu-item"><a href="/our-products-services">Our Products</a></li>
+                                <li class="menu-item"><a href="/careers">Careers</a></li>
+                                <li class="menu-item"><a href="/mindscape/">Blog</a></li>
+                                <li class="menu-item"><a href="/contact-us">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="fullpage">
+    <!-- hero-slider-section -->
+    <section class="section hero-slider-section">
+        <div class="hero-slider-outer">
+            <div class="banner-content">
+                <div class="container">
+                    <span class="banner-sub-head">India’s Most Trusted</span>
+                    <h1>Software development & Solutions <br>company</h1>
+                    <p>Vinove is an award winning Digital Consulting & Product Engineering Firm offering end-to-end software development solutions to Enterprises, ISVs, Digital Agencies and Startups.</p>
+                    <?php if(!isMobile()) { ?>
+                    <!-- <div class="award-slider-section in-desktop">
+                        <h4>Awards and partnership</h4>
+                        <div class="award-slider owl-carousel owl-theme">
+                            <div>
+                                <img width="151" height="56" src="images/amazon-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="75" height="64" src="images/docker-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="185" height="31" src="images/google-cloud-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="122" height="81" src="images/ind-eretail-logo-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="71" height="58" src="images/iso-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="195" height="53" src="images/mongo-bd-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="79" height="75" src="images/red-herring-logo.webp" alt="logo">
+                            </div>
+                            <div>
+                                <img width="120" height="92" src="images/workplace-logo.webp?<?php echo time(); ?>" alt="logo">
+                            </div>
+                            <div>
+                                <img width="185" height="31" src="images/google-cloud-logo.webp" alt="logo">
+                            </div>
+                        </div>
+                    </div> -->
+                    <?php } ?>
+                    <div class="follow-us">
+                        <span class="follow-txt">Follow <span class="line"></span></span>
+                        <span class="follow-link">
+                            <a href="https://www.instagram.com/vinove_softwares"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/Vinove"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/vinove"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/vinove/"><i class="fab fa-linkedin-in"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <?php if( !isMobile() ) : ?>
+            <div class="hero-slider owl-carousel owl-theme">
+                <div>
+                    <img width="1857" height="1080" src="images/banner-slider-1.webp" alt="Banner 1">
+                </div>
+                <div>
+                    <img width="1857" height="1080" src="images/banner-slider-2.webp" alt="Banner 2">
+                </div>
+            </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <!-- about-us-section -->
+    <section class="section about-us-section padding-tb-100">
+        <div class="container">
+            <div class="flexbox">
+                <div class="img-box">
+                    <img loading="lazy" width="720" height="712" src="images/about-img.webp" alt="About Image">
+                </div>
+                <div class="right-box">
+                    <div class="head">
+                        <h3>About Us</h3>
+                        <h2>A Place Where Clients and Employees Both Are Valued Equally!</h2>
+                    </div>
+                    <div class="inner-content">
+                        <p>Vinove Software is a 18+ years old software development company with an outstanding brand value in India. With 5600+ happy clients, we have become the first choice of several startups and SMEs.</p>
+                        <p>Our company culture is based on modern ideas, hardworking teammates, and a young professional environment where you can grow together with us by learning, exploring new technologies, and building great things.</p>
+                        <p>We combine extreme talent with cutting-edge technology to create flawless apps that win the hearts of developers, managers, and end-users worldwide.</p>
+                    </div>
+
+                    <div class="about-icon-box-outer text-center">
+                        <div class="about-icon-box">
+                            <span><img loading="lazy" width="40" height="40" src="images/about-icon1.webp" alt="Icon"></span>
+                            <div class="icon-txt-outer">
+                                <span class="icon-txt-big">650+</span>
+                                <span class="icon-txt-small">staff</span>
+                            </div>
+                        </div>
+                        <div class="about-icon-box">
+                            <span><img loading="lazy" width="39" height="40" src="images/about-icon2.webp" alt="Icon"></span>
+                            <div class="icon-txt-outer">
+                                <span class="icon-txt-big">18+</span>
+                                <span class="icon-txt-small">Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="about-icon-box">
+                            <span><img loading="lazy" width="38" height="40" src="images/about-icon3.webp" alt="Icon"></span>
+                            <div class="icon-txt-outer">
+                                <span class="icon-txt-big">5600+</span>
+                                <span class="icon-txt-small">Satisfied Customers</span>
+                            </div>
+                        </div>
+                        <div class="about-icon-box">
+                            <span><img loading="lazy" width="35" height="36" src="images/about-icon4.webp" alt="Icon"></span>
+                            <div class="icon-txt-outer">
+                                <span class="icon-txt-big">97%+</span>
+                                <span class="icon-txt-small">Clients Retention</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php if( isMobile() ) : ?>
+                    <div class="award-slider-section in-mobile">
+                        <div class="container">
+                            <h4>Awards and partnership</h4>
+                            <div class="glider-contain award-slider">
+                                <div class="glider">
+                                    <div>
+                                        <img width="151" height="56" src="images/amazon-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="75" height="64" src="images/docker-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="185" height="31" src="images/google-cloud-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="122" height="81" src="images/ind-eretail-logo-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="71" height="58" src="images/iso-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="195" height="53" src="images/mongo-bd-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="79" height="75" src="images/red-herring-logo.webp" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="120" height="92" src="images/workplace-logo.webp?<?php echo time(); ?>" alt="logo">
+                                    </div>
+                                    <div>
+                                        <img width="185" height="31" src="images/google-cloud-logo.webp" alt="logo">
+                                    </div>
+                                </div>
+                                <button class="glider-prev"><i class="fal fa-angle-left angle-icon"></i></button>
+                                <button class="glider-next"><i class="fal fa-angle-right angle-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+
+                    <div class="button-box">
+                        <a href="/about-us" class="default-btn">View More <i class="fal fa-angle-right angle-icon"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- product-section -->
+    <section class="section product-section padding-tb-100">
+        <div class="container">
+            <div class="width-900 text-center">
+                <div class="head">
+                    <h3>OUR BRANDS</h3>
+                    <h2>Product and solutions</h2>
+                </div>
+                <div class="inner-content">
+                    <p>Delivering outstanding solutions is in our DNA! We are experts in the following areas: custom software development, mobile app development, web development, eCommerce development, and more.</p>
+                </div>
+            </div>
+            <div class="product-outer margin-t-100">
+                <div class="our-products">
+                    <a href="/our-products-services#valuecoders" class="product-inner">
+                        <div class="logo-img">
+                            <img loading="lazy" width="226" height="40" src="images/valuecoders-logo.webp" alt="Valuecoders">
+                        </div>
+                        <p>Software development company in India providing developers on hire basis.</p>
+                        <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="our-products">
+                    <a href="/our-products-services#workstatus" class="product-inner">
+                        <div class="logo-img">
+                            <img loading="lazy" width="254" height="53" src="images/logo-workstatus.svg" alt="Workstatus">
+                        </div>
+                        <p>An AI powered workforce management software for your everyday process management.</p>
+                        <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="our-products">
+                    <a href="/our-products-services#pixelcrayons" class="product-inner">
+                        <div class="logo-img">
+                            <img loading="lazy" width="233" height="67" src="images/pixelcrayons-logo.webp" alt="Pixelcrayons">
+                        </div>
+                        <p>Digital transformation company offering software product development services.</p>
+                        <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="our-products">
+                    <a href="/our-products-services#invoicera" class="product-inner">
+                        <div class="logo-img">
+                            <img loading="lazy" width="226" height="53" src="images/invoicera-logo.webp" alt="Invoicera">
+                        </div>
+                        <p>Intuitive online invoicing software to automate your AR & AP process.</p>
+                        <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- technology-section -->
+    <section class="section technology-section padding-tb-100">
+        <div class="container">
+            <div class="head text-center">
+                <h3>Technologies</h3>
+                <h2>We have 500+ experts in different technology</h2>
+            </div>
+            <div class="technology-icon-box margin-t-100">
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="53" height="55" src="images/android-logo-icon.webp" alt="Android">
+                        </div>
+                        <span class="icon-txt">Android</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="75" height="30" src="images/dotnet-logo-icon.webp" alt="Dotnet">
+                        </div>
+                        <span class="icon-txt">Dotnet</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="48" height="59" src="images/ios-logo-icon.webp" alt="ios">
+                        </div>
+                        <span class="icon-txt">ios</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="41" height="58" src="images/java-logo-icon.webp" alt="Java">
+                        </div>
+                        <span class="icon-txt">Java</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="58" height="53" src="images/xamrin-logo-icon.webp" alt="Xamrin">
+                        </div>
+                        <span class="icon-txt">Xamarin</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="64" height="35" src="images/php-logo-icon.webp" alt="Php">
+                        </div>
+                        <span class="icon-txt">Php</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="54" height="50" src="images/react-logo-icon.webp" alt="React">
+                        </div>
+                        <span class="icon-txt">React Native</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="50" height="51" src="images/laravel-logo-icon.webp" alt="Laravel">
+                        </div>
+                        <span class="icon-txt">Laravel</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="54" height="53" src="images/ionic-logo-icon.webp" alt="Ionic">
+                        </div>
+                        <span class="icon-txt">Ionic</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="46" height="46" src="images/python-logo-icon.webp" alt="Python">
+                        </div>
+                        <span class="icon-txt">Python</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="54" height="55" src="images/flutter-logo-icon.webp" alt="Flutter">
+                        </div>
+                        <span class="icon-txt">Flutter</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="42" height="51" src="images/node-logo-icon.webp" alt="Node">
+                        </div>
+                        <span class="icon-txt">Node</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="45" height="56" src="images/angular-logo-icon.webp" alt="Angular">
+                        </div>
+                        <span class="icon-txt">Angular</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="50" height="51" src="images/chatbot-logo-icon.webp" alt="Chatbot">
+                        </div>
+                        <span class="icon-txt">ChatBot</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="50" height="51" src="images/vue-logo-icon.webp" alt="Vue">
+                        </div>
+                        <span class="icon-txt">Vue</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="32" height="53" src="images/ethereum-logo-icon.webp" alt="Ethereum">
+                        </div>
+                        <span class="icon-txt">ethereum</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="60" height="58" src="images/devops-logo-icon.webp" alt="Devops">
+                        </div>
+                        <span class="icon-txt">DevOps</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="56" height="59" src="images/hyperledger-logo-icon.webp" alt="Hyperledger">
+                        </div>
+                        <span class="icon-txt">Hyperledger</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="54" height="50" src="images/react-logo-icon.webp" alt="React">
+                        </div>
+                        <span class="icon-txt">React</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="50" height="51" src="images/smart-contract-logo-icon.webp" alt="Smart Contract">
+                        </div>
+                        <span class="icon-txt">Smart Contract</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="74" height="36" src="images/mean-logo-icon.webp" alt="Mean">
+                        </div>
+                        <span class="icon-txt">MEAN</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="54" height="51" src="images/ml-ai-logo-icon.webp" alt="Ml-ai">
+                        </div>
+                        <span class="icon-txt">ML & AI</span>
+                    </div>
+                </div>
+                <div class="row-box">
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="70" height="28" src="images/mern-logo-icon.webp" alt="Mern">
+                        </div>
+                        <span class="icon-txt">MERN</span>
+                    </div>
+                    <div class="col-box">
+                        <div class="icon-img">
+                            <img loading="lazy" width="57" height="62" src="images/tensorflow-logo-icon.webp" alt="Tensorflow">
+                        </div>
+                        <span class="icon-txt">Tensorflow</span>
+                    </div>
+                </div>
+            </div>
+            <div class="button-box text-center margin-t-100">
+                <a href="/contact-us" class="default-btn">Know More <i class="fal fa-angle-right angle-icon"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- client-section -->
+    <section class="section client-section padding-tb-100">
+        <div class="container">
+            <div class="head text-center">
+                <h3>Clients</h3>
+                <h2>Our Work Speaks for Itself</h2>
+            </div>
+            <div class="client-icon-box">
+                <div class="client-logo">
+                    <img loading="lazy" width="151" height="48" src="images/client-logo1.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="152" height="17" src="images/client-logo2.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="97" height="37" src="images/client-logo3.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="138" height="31" src="images/client-logo4.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="148" height="34" src="images/client-logo5.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="142" height="32" src="images/client-logo6.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="151" height="33" src="images/client-logo7.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="135" height="48" src="images/client-logo8.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="187" height="43" src="images/client-logo9.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="107" height="33" src="images/client-logo10.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="109" height="42" src="images/client-logo11.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="183" height="39" src="images/client-logo12.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="117" height="41" src="images/client-logo13.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="150" height="29" src="images/client-logo14.webp" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img loading="lazy" width="114" height="27" src="images/client-logo15.webp" alt="Client Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php if( !isMobile() ) : ?>
+    <!-- blog-section -->
+    <section class="section blog-section padding-tb-100">
+    <div class="container">
+        <div class="head text-center">
+            <h3>Our Blogs</h3>
+            <h2>Latest Blogs info</h2>
+        </div>
+        <?php 
+        $ch = curl_init('https://www.vinove.com/mindscape/wp-json/blogposts/v1/posts/');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $data = curl_exec($ch);
+        $blogPosts = json_decode( $data );
+        curl_close($ch);
+        if( $blogPosts ) :     
+        ?>
+        <div class="blog-outer margin-t-100">
+        <?php foreach( $blogPosts as $post ){ ?>    
+            <div class="blog-box">
+                <a href="<?php echo $post->permalink; ?>">
+                    <div class="blog-img">
+                        <img loading="lazy" width="506" height="390" src="<?php echo $post->thumbnail; ?>" alt="Blog Image">
+                    </div>
+                    <div class="blog-content-box">
+                        <div class="blog-info">
+                            <div class="photo-box">
+                                <!-- <img loading="lazy" width="523" height="280" src="images/photo-icon.webp" alt="Photo Icon"> -->
+                                <span class="editor">by <?php echo $post->author; ?></span>
+                            </div>
+                            <div class="date-box">
+                                <i class="fal fa-calendar-alt"></i> <span><?php echo $post->created_at; ?></span>
+                            </div>
+                            <div class="comment-box">
+                                <i class="fal fa-comment-alt-lines"></i> <span><?php echo $post->comments; ?></span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3><?php echo $post->title; ?></h3>
+                            <p><?php echo $post->experpt; ?></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <?php } ?>
+        </div>
+        <?php endif; ?>
+    </div>
+    </section>
+    <?php endif; ?>
+    <footer class="section fp-auto-height footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="left-footer">
+                    <p>Copyright © <?php echo date("Y"); ?> Vinove. All rights reserved.</p>
+                    <span class="follow-link">
+                        <a href="https://www.instagram.com/vinove_softwares"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Vinove"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/vinove"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/vinove/"><i class="fab fa-linkedin-in"></i></a>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    
+    </div>
+    <?php if( !isMobile() ) : ?>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js?<?php echo time(); ?>"></script>
+    <script src="js/fullpage.js?<?php echo time(); ?>"></script>
+    <?php endif; ?>
+
+    <?php if( isMobile() ) : ?>
+    <script src="js/glider.min.js"></script>
+    <script>
+    window.addEventListener('load',function(){
+    document.querySelector('.glider').addEventListener('glider-slide-visible', function(event){
+        var glider = Glider(this);
+        //console.log('Slide Visible %s', event.detail.slide)
+    });
+    document.querySelector('.glider').addEventListener('glider-slide-hidden', function(event){
+        //console.log('Slide Hidden %s', event.detail.slide)
+    });
+    document.querySelector('.glider').addEventListener('glider-refresh', function(event){
+        //console.log('Refresh')
+    });
+    document.querySelector('.glider').addEventListener('glider-loaded', function(event){
+        //console.log('Loaded')
+    });
+
+    window._ = new Glider(document.querySelector('.glider'), {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        rewind: true,
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+        }
+    });
+    });
+    document.getElementById('menu-toggler').onclick = function(){
+    if( document.querySelector("body").classList.contains("menu-active") ){
+       document.querySelector("body").classList.remove("menu-active");
+    }else{
+        document.querySelector("body").classList.add("menu-active");
+    }
+    }
+    </script>
+    <?php endif; ?>
+</body>
+</html>

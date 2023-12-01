@@ -1,0 +1,685 @@
+<?php require_once('common/config/config.inc.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career at Vinove | Jobs in Software Development Company</title>
+    <meta name="description"
+        content="Are you looking for jobs in a software development company near me? Vinove offers bright career opportunity to techies with 360 degree growth. Checkout the open positions." />
+    <meta name="keywords" content="it services, software, development, company, firm" />
+    <link rel="shortcut icon" href="images/small-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="preload stylesheet" href="css/owl.carousel.min.css" as="style">
+    <link rel="preload stylesheet" href="css/owl.theme.default.css" as="style">
+    <link rel="preload stylesheet" href="css/all.css?<?php echo time(); ?>" as="style">
+    <link rel="preload stylesheet" href="css/style.css?<?php echo time(); ?>" as="style">
+    <style>
+    @media only screen and (max-width: 600px) {
+    .employee-testimonial-career-section .cust-img-box{padding:20px;}
+    }    
+    .employee-testimonial-career-section .cust-img-box{background:#0C151B; border-radius:0;}
+    
+    .employee-testimonial-career-section .flip-color .content-box{background:#0C151B;}
+    .employee-testimonial-career-section .flip-color .cust-img-box{background:#090E12;}
+    @media only screen and (max-width: 1600px){
+    .employee-testimonial-career-section .first-row-last-col .content-box.ps-box{min-height:410px;}
+    }
+    @media only screen and (max-width: 1200px){
+    .employee-testimonial-career-section .first-row-last-col .content-box.ps-box{min-height:auto;}
+    }
+    
+    @media only screen and (min-width: 1600px){
+    .employee-testimonial-career-section .first-row-last-col .content-box.ps-box{min-height:420px; padding: 30px 63px;}
+    }
+    
+    </style>
+</head>
+
+<body class="<?php echo ( isMobile() ) ? ' mobile-tpl' : ' desktop-tpl'; ?>">
+
+    <header class="header">
+        <div class="container">
+            <div class="heder-inner">
+                <div class="logo">
+                    <a href="https://www.vinove.com">
+                        <picture>
+                            <source type="image/webp" srcset="images/logo.webp">
+                            <source type="image/png" srcset="images/logo.png">
+                            <img loading="lazy" width="400" height="114" src="images/logo.png"
+                                alt="Vinove Logo">
+                        </picture>  
+                    </a>
+                </div>
+                <div class="push-left">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </button>
+                    <div class="nav">
+                        <nav>
+                            <ul id="primary-menu" class="menu nav-menu">
+                                <!-- <li class="menu-item current-menu-item"><a href="/betasite/">Home</a></li> -->
+                                <li class="menu-item"><a href="/about-us">About Us</a></li>
+                                <li class="menu-item"><a href="/our-products-services">Our Products</a></li>
+                                <li class="menu-item"><a href="/careers">Careers</a></li>
+                                <li class="menu-item"><a href="/mindscape/">Blog</a></li>
+                                <li class="menu-item"><a href="/contact-us">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero-slider-section -->
+    <section class="about-hero-section hero-slider-section">
+        <div class="hero-slider-outer">
+            <div class="banner-content">
+                <div class="container">
+                    <div class="flexbox">
+                        <div class="content-block">
+                            <h3>Career</h3>
+                            <h1>Where You Can Learn, Explore, and Grow Together!</h1>
+                            <p>Being a Leading Software Development Company in India, Vinove Provides an Inclusive Work
+                                Atmosphere to Passionate Dreamers and Enthusiastic Techies Who Are Always Ready to Take
+                                Challenges and Discover New Things. With 18+ years of expertise, we have 5600+ happy
+                                customers and completed 12600+ projects.</p>
+                            <div class="about-icon-box-outer text-center">
+                                <div class="about-icon-box">
+                                    <span><img loading="lazy" width="40" height="40" src="images/about-icon1.webp"
+                                            alt="Icon"></span>
+                                    <div class="icon-txt-outer">
+                                        <span class="icon-txt-big">12600+</span>
+                                        <span class="icon-txt-small">Projects Launched </span>
+                                    </div>
+                                </div>
+                                <div class="about-icon-box">
+                                    <span><img loading="lazy" width="39" height="40" src="images/about-icon2.webp"
+                                            alt="Icon"></span>
+                                    <div class="icon-txt-outer">
+                                        <span class="icon-txt-big">18+</span>
+                                        <span class="icon-txt-small">Years Experience</span>
+                                    </div>
+                                </div>
+                                <div class="about-icon-box">
+                                    <span><img loading="lazy" width="38" height="40" src="images/about-icon3.webp"
+                                            alt="Icon"></span>
+                                    <div class="icon-txt-outer">
+                                        <span class="icon-txt-big">5600+</span>
+                                        <span class="icon-txt-small">Satisfied Customers</span>
+                                    </div>
+                                </div>
+                                <div class="about-icon-box">
+                                    <span><img loading="lazy" width="35" height="36" src="images/about-icon4.webp"
+                                            alt="Icon"></span>
+                                    <div class="icon-txt-outer">
+                                        <span class="icon-txt-big">97%+</span>
+                                        <span class="icon-txt-small">Clients Retention</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-box img-right-space">
+                            <img loading="lazy" width="581" height="660" src="images/career-group-pic.webp"
+                                alt="Career Group Image">
+                        </div>
+                    </div>
+                    <div class="follow-us">
+                        <span class="follow-txt">Follow <span class="line"></span></span>
+                        <span class="follow-link">
+                            <a href="https://www.instagram.com/vinove_softwares"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/Vinove"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/vinove"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/vinove/"><i class="fab fa-linkedin-in"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <?php if( !isMobile() ) : ?>
+            <div class="hero-slider owl-carousel owl-theme">
+                <div>
+                    <img width="1857" height="1080" src="images/banner-slider-1.webp" alt="Banner 1">
+                </div>
+                <div>
+                    <img width="1857" height="1080" src="images/banner-slider-2.webp" alt="Banner 2">
+                </div>
+            </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <!-- Our Mission and Vision -->
+    <section class="our-culture-section padding-tb-100">
+        <div class="container">
+            <div class="head text-center">
+                <h3>Benefits</h3>
+                <h2>Why Work with Vinove ?</h2>
+            </div>
+            <div class="flexbox text-center">
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion1.webp" alt="Value Icon">
+                    <h4>Health & Wellness</h4>
+                    <p>Group health insurance and health camps for staff and families</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion2.webp" alt="Value Icon">
+                    <h4>Collaborative Learning Approach</h4>
+                    <p>Regular training for soft skill development, certifications, jobs, and more.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion3.webp" alt="Value Icon">
+                    <h4>Work-Life Balance</h4>
+                    <p>5 days in a week working with Work From Home roasters.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion4.webp" alt="Value Icon">
+                    <h4>Leading Technology Projects</h4>
+                    <p>Opportunity to learn and work on the latest technologies.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion5.webp" alt="Value Icon">
+                    <h4>Fun & Engagement</h4>
+                    <p>Team outings, fun at work, birthday bashes, and more.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion6.webp" alt="Value Icon">
+                    <h4>Rewards & Benefits</h4>
+                    <p>Quarterly award programs recognizing the in-house talents.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion7.webp" alt="Value Icon">
+                    <h4>Modern Amenities</h4>
+                    <p>Cafeteria, gyms, play stations, refreshments, and more.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion8.webp" alt="Value Icon">
+                    <h4>Management Reachout</h4>
+                    <p>Regular skip-level meetings, Express-O with CEO, and more.</p>
+                </div>
+                <div class="icon-content-box">
+                    <img loading="lazy" width="40" height="40" src="images/benefit-ion9.webp" alt="Value Icon">
+                    <h4>Corporate Social Responsibility</h4>
+                    <p>CSR initiatives aiming to address societal goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- client-section -->
+    <section class="section client-section padding-tb-100">
+        <div class="container">
+            <div class="head text-center">
+                <h3>OUR AWARDS</h3>
+                <h2>Awards and Partnership</h2>
+            </div>
+            <div class="client-icon-box">
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo1.webp">
+                        <source type="image/png" srcset="images/product-client-logo1.png">
+                        <img loading="lazy" width="140" height="105" src="images/product-client-logo1.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo5.webp">
+                        <source type="image/png" srcset="images/product-client-logo5.png">
+                        <img loading="lazy" width="87" height="70" src="images/product-client-logo5.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo3.webp">
+                        <source type="image/png" srcset="images/product-client-logo3.png">
+                        <img loading="lazy" width="92" height="130" src="images/product-client-logo3.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>                    
+
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo4.webp">
+                        <source type="image/png" srcset="images/product-client-logo4.png">
+                        <img loading="lazy" width="224" height="34" src="images/product-client-logo4.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo15.webp">
+                        <source type="image/png" srcset="images/product-client-logo15.png">
+                        <img loading="lazy" width="152" height="61" src="images/product-client-logo15.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo6.webp">
+                        <source type="image/png" srcset="images/product-client-logo6.png">
+                        <img loading="lazy" width="151" height="60" src="images/product-client-logo6.png"
+                            alt="Client Logo">
+                    </picture>
+
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo7.webp">
+                        <source type="image/png" srcset="images/product-client-logo7.png">
+                        <img loading="lazy" width="92" height="93" src="images/product-client-logo7.png"
+                            alt="Client Logo">
+                    </picture>
+
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo8.webp">
+                        <source type="image/png" srcset="images/product-client-logo8.png">
+                        <img loading="lazy" width="123" height="88" src="images/product-client-logo8.png"
+                            alt="Client Logo">
+                    </picture>
+
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo9.webp">
+                        <source type="image/png" srcset="images/product-client-logo9.png">
+                        <img loading="lazy" width="195" height="53" src="images/product-client-logo9.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo2.webp">
+                        <source type="image/png" srcset="images/product-client-logo2.png">
+                        <img loading="lazy" width="172" height="32" src="images/product-client-logo2.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo11.webp">
+                        <source type="image/png" srcset="images/product-client-logo11.png">
+                        <img loading="lazy" width="150" height="56" src="images/product-client-logo11.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo12.webp">
+                        <source type="image/png" srcset="images/product-client-logo12.png">
+                        <img loading="lazy" width="114" height="114" src="images/product-client-logo12.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo13.webp">
+                        <source type="image/png" srcset="images/product-client-logo13.png">
+                        <img loading="lazy" width="91" height="78" src="images/product-client-logo13.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/vinove-great-place.webp">
+                        <source type="image/png" srcset="images/vinove-great-place.png">
+                        <img loading="lazy" width="72" height="122" src="images/vinove-great-place.png" alt="Client Logo">
+                    </picture>
+                </div>
+
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/deloitte-500.webp">
+                        <source type="image/png" srcset="images/deloitte-500.png">
+                        <img loading="lazy" width="173" height="95" src="images/deloitte-500.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+
+                
+                
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo16.webp">
+                        <source type="image/png" srcset="images/product-client-logo16.png">
+                        <img loading="lazy" width="107" height="46" src="images/product-client-logo16.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo17.webp">
+                        <source type="image/png" srcset="images/product-client-logo17.png">
+                        <img loading="lazy" width="159" height="46" src="images/product-client-logo17.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo18.webp">
+                        <source type="image/png" srcset="images/product-client-logo18.png">
+                        <img loading="lazy" width="195" height="54" src="images/product-client-logo18.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                <div class="client-logo">
+                    <picture>
+                        <source type="image/webp" srcset="images/product-client-logo10.webp">
+                        <source type="image/png" srcset="images/product-client-logo10.png">
+                        <img loading="lazy" width="185" height="31" src="images/product-client-logo10.png"
+                            alt="Client Logo">
+                    </picture>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="employee-testimonial-career-section padding-tb-100">
+        <div class="container">
+            <div class="head text-center">
+                <h3>TEAM TESTIMONIALS</h3>
+                <h2>What Our Employee Say</h2>
+            </div>
+
+            <div class="dis-flex margin-t-100">
+                <div class="flex-3">
+                    <div class="shadow-box">
+                        <iframe height="271" src="https://www.youtube.com/embed/P6IJX4toWAU"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}a{display:flex;align-items:center;justify-content:center;}.iframe-bg{background: url(images/clien-video-bg-1.webp) top center no-repeat;background-size:cover;width:100%;height:100%;}</style><a href=https://www.youtube.com/embed/P6IJX4toWAU><span class='iframe-bg'></span></a>"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" title="Testimonial Image"></iframe>
+                        <div class="client-description bg-lightgray small-column">
+                            <span class="client-name">Khushbu Chauhan</span>
+                            <span class="client-quote">Sr. Project Management Executive - L2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <div class="shadow-box">
+                        <iframe height="271" src="https://youtube.com/embed/8DBMHP0jOyM"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}a{display:flex;align-items:center;justify-content:center;}.iframe-bg{background: url(images/clien-video-bg-2.webp) top center no-repeat;background-size:cover;width:100%;height:100%;}</style><a href=https://youtube.com/embed/8DBMHP0jOyM><span class='iframe-bg'></span></a>"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" title="Testimonial Image"></iframe>
+                        <div class="client-description bg-lightgray small-column">
+                            <span class="client-name">Navin Kumar</span>
+                            <span class="client-quote">Mobility team</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3 first-row-last-col">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray ps-box">
+                            <p>In my time here, I've experienced firsthand the support system that Vinove has in place. From continuous training & development opportunities to upskilling of already present skills, which instilled in me a newfound confidence in my abilities. They encourage me to stretch my limits & explore new horizons which elevated my career, for that, I am truly thankful.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile1">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-prathiksha.webp">
+                                    <source type="image/png" srcset="images/profile-prathiksha.png">
+                                    <img loading="lazy" src="images/profile-prathiksha.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Prathiksha Shetty</h5>
+                                <h6>Associate Software Developer</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray">
+                            <p>I was looking for a company that inspires me, a product that I feel passionate about, a
+                                position that challenges me and stretches me into different areas, management that
+                                encourages and empowers me to do my best and a great work environment and team spirit.
+                            </p>
+                            <p>At Vinove, all these things are taken care of. I'm always inspired to do my best and
+                                think forward. I like the mindset and culture, and being part of a team that gives its
+                                best to make the next generation of technologies usable and accessible to all its
+                                clients. For me, this is more than a job. I’m investing my time, my knowledge and
+                                experience in a company that is investing in me.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile1">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-2.webp">
+                                    <source type="image/png" srcset="images/profile-2.png">
+                                    <img loading="lazy" src="images/profile-2.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Pankaj Masiwal</h5>
+                                <h6>Operations (MERN Stack)</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray">
+                            <p>It's been almost 1.5 years with Vinove and from the day I've joined, I've been given
+                                ample opportunities to nurture my professional career development by finding a role as
+                                an Associate Java Developer that suits my abilities and interests. Being a Java
+                                Developer in the NCN/ OTAVA Team, there have been lots of opportunities for me to work
+                                on different tools like Salesforce, ConnectWise, Billing Platforms, Veeam Services,
+                                Auth0 etc., with a variety of business aspects. I am proud of the Vinove Family and
+                                appreciate the opportunities to realize my full potential, as well as a cooperative and
+                                encouraging work culture. Vinove is a Great Place to Work!</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile2">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-3.webp">
+                                    <source type="image/png" srcset="images/profile-3.png">
+                                    <img loading="lazy" src="images/profile-3.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Rupesh Kumar</h5>
+                                <h6>Associate Software Developer</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray">
+                            <p>It feels great to have received the IMAD and it is very special as it is my first ever
+                                recognition in the corporate world. It gives me motivation to put my all into whatever
+                                project I am working on, because I know that my hard work will be appreciated.</p>
+                            <p>My journey here at Vinove has been fantastic, filled with guidance and learning. Day
+                                by day I have learned new things thanks to all the support from my seniors and
+                                colleagues, the people here at Vinove are amazing and full of knowledge.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile3">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-4.webp">
+                                    <source type="image/png" srcset="images/profile-4.png">
+                                    <img loading="lazy" src="images/profile-4.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Akash Vishwakarma</h5>
+                                <h6>Associate Software Developer</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-2 first-box">
+                    <div class="content-box-outer flip-color">
+                        <div class="content-box bg-lightgray">
+                            <p>Initially, Thank You so much for recognising my efforts, and honestly, the feeling is
+                                very peculiar as I had not anticipated this award coming my way.</p>
+                            <p>I got to know about this from a friend as unfortunately, I couldn't attend the 'Rewards
+                                and Recognition Call' because I was occupied with something else but the moment I heard
+                                it I went into a state of exuberance. Everyone around was so happy for me and above all,
+                                I saw pride in my manager’s eyes, Vipul sir, that his lad did it. I prominently agree to
+                                the fact he is the reason I got this award. Moreover, my journey in this organisation so
+                                far is above par in all aspects, I have been involved in multiple projects I got to know
+                                a lot about how the wheel rotates in corporate because yes obviously I was a freshman
+                                and needed to learn a lot,this company gave me the opportunity and right resources at
+                                the right time. Lastly I want to thank my peers for supporting me throughout. Thankyou
+                                Vinove for this recognition.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile4">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-5.webp">
+                                    <source type="image/png" srcset="images/profile-5.png">
+                                    <img loading="lazy" src="images/profile-5.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Mohd. Talib Khan</h5>
+                                <h6>Associate Software Developer</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-2 second-box">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray">
+                            <p>Vinove has provided me with a platform to learn, evolve, and constantly evaluate my
+                                progress. The opportunities presented are great for me in the longer scheme of my career
+                                growth too. They not only enabled me to implement new ideas but also gave me the
+                                platform to learn from my mistakes. In the past 10 months continuous feedback and
+                                conversation with my managers has groomed my project management skills and has helped me
+                                build a vision of what I would like to achieve in the coming few years.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile5">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-6.webp">
+                                    <source type="image/png" srcset="images/profile-6.png">
+                                    <img loading="lazy" src="images/profile-6.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Sunny Jha</h5>
+                                <h6>Project Management Executive</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-2 first-box">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray">
+                            <p>I started working at Vinove in October 2022 and it means a lot to me. During this year, I've felt like part of a close-knit family right from the beginning, thanks to the friendly & supportive team.</p>
+<p>What makes Vinove special is how much they care about helping their employees grow. The training they provide isn't just informative but also fun & well-organized, which helped me get better at my job and also it guided me on upskilling myself through regular feedback. But the best part is how senior colleagues are always there to help and guide. Their friendship & mentoring have been a big part of my success.</p>
+<p>Looking back on my first year at corporate life, I'm really thankful for all the opportunities, friendships & personal growth it has given me. Vinove isn't just a place to work; it's where dreams come true, talents are developed & goals are achieved, it is also where you are given ample opportunities to upskill & better your craft. I'm excited about what the future holds at this amazing company.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile4">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-ram.webp">
+                                    <source type="image/png" srcset="images/profile-ram.png">
+                                    <img loading="lazy" src="images/profile-ram.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Ram</h5>
+                                <h6>Associate Software Developer</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-2 second-box">
+                    <div class="content-box-outer">
+                        <div class="content-box bg-lightgray">
+                            <p>I started my career here as a Fresher & was welcomed by an incredible team that values personal & professional growth. My experience here has been a journey of constant learning & upskilling. I have had the privilege of working with some amazing colleagues who have been my mentors as well as my friends, they have taught me about how to face complex problems & find innovative solutions to them. It has not only honed my technical skills but also taught me the value of perseverance. Thank you for being a part of my journey.</p>
+                        </div>
+                        <div class="cust-img-box dis-flex">
+                            <div class="profile profile5">
+                                <picture>
+                                    <source type="image/webp" srcset="images/profile-karan.webp">
+                                    <source type="image/png" srcset="images/profile-karan.png">
+                                    <img loading="lazy" src="images/profile-karan.png" alt="Vinove" width="76" height="74">
+                                </picture>
+                            </div>
+                            <div class="profile-text">
+                                <h5 class="clr-white">Karan</h5>
+                                <h6>QA Associate</h6>
+                                <span class="rating"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- client-section -->
+    <section class="current-openings-section padding-tb-100">
+        <div class="container">
+
+            <div class="head text-center">
+                <h3>See current openings</h3>
+                <h2>Let's Work Together!</h2>
+            </div>
+            <div class="current-oppenings">
+                <iframe src="https://vinove.kekahire.com/api/embedjobs/efdbfe8f-0c89-43a7-b197-ff60d832994a"
+                    height="1400" width="1600"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="left-footer">
+                    <p>Copyright &copy; <?php echo date("Y"); ?> Vinove. All rights reserved.</p>
+                    <span class="follow-link">
+                        <a href="https://www.instagram.com/vinove_softwares"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Vinove"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/vinove"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/vinove/"><i class="fab fa-linkedin-in"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <?php if( !isMobile() ) : ?>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js?<?php echo time(); ?>"></script>
+    <?php endif; ?>
+    <?php if( isMobile() ) : ?>
+    <script>
+        window.addEventListener('scroll', function () {
+            window.pageYOffset > 10 ? document.querySelector(".header").classList.add("header-bg") : document.querySelector(".header").classList.remove("header-bg")
+        });
+        document.getElementById('menu-toggler').onclick = function () {
+            if (document.querySelector("body").classList.contains("menu-active")) {
+                document.querySelector("body").classList.remove("menu-active");
+            } else {
+                document.querySelector("body").classList.add("menu-active");
+            }
+        }
+    </script>
+    <?php endif; ?>
+</body>
+
+</html>

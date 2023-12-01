@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /common/
+Disallow: /beta/
+Disallow: /admim/
+Disallow: /my/
+Disallow: /pay/
+Disallow: /pixelcrayons/
+Disallow: /sitespices/
+Disallow: /backup/
+Disallow: /mailers/
+Disallow: /components/
+Disallow: /classes/
+Disallow: /lead-form/
+Disallow: /betasite/

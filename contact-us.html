@@ -1,0 +1,338 @@
+<?php 
+if(isset($_POST['cont_name'])){ 
+$token              = trim($_POST['g-recaptcha-response']);
+$secretKey          = "6LeUGBkgAAAAAAve0CTzS7afL0flqbbRCLO00EWf";
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "https://www.google.com/recaptcha/api/siteverify",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "POST",
+    CURLOPT_POSTFIELDS => "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"secret\"\r\n\r\n$secretKey\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"response\"\r\n\r\n$token\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--",
+    CURLOPT_HTTPHEADER => array(
+        "cache-control: no-cache",
+        "content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
+    ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+    echo "cURL Error #:" . $err;
+} else {
+    $responseKeys = json_decode($response,true);
+    if($responseKeys["success"]) {
+        
+        require_once('sendmail.php');   
+
+$varUserName        = $_SESSION['cont_name']   = $_POST['cont_name'];
+$varUserPhone       = $_SESSION['cont_phpne']   = $_POST['cont_phpne'];
+$varUserEmail       = $_SESSION['cont_email']   = $_POST['cont_email'];
+$varUserSkype       = $_SESSION['cont_skype']   = $_POST['cont_skype'];
+$varUserCountry     = $_SESSION['cont_country']   = $_POST['cont_country'];
+$varUserUrl         = $_SESSION['cont_url']   = $_POST['cont_url'];
+$varUserEnquiry     = $_SESSION['inquey_type']  = $_POST['inquey_type'];
+$varUsercomments    = $_SESSION['texteareacostm'] = $_POST['texteareacostm'];
+
+        contactUsArray($_POST);
+    } else {
+        echo "<script>alert('invalid captcha')</script>";
+        //print_r($_POST); die;
+       // contactUsArray($_POST);
+    }
+}
+
+
+//contactUsArray($_POST);
+
+}
+$job_title = "";
+$job_apply="";
+
+
+//$careers_data = base64_decode($_REQUEST['job_post']);
+//$careers_data = "Android Developer, Job Location : New Delhi & Gurgaon&#yes";
+// $split = explode("&#&",$careers_data);
+
+// if(isset($_REQUEST['job_post'])) {
+//   $job_title = $split[0];
+//   $job_apply = $split[1];
+// }
+?>
+<?php require_once('common/config/config.inc.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Company | Software Engineering Firm</title>
+    <meta name="description" content="Are you looking for the best software development company near me? We are an award winning Digital Consulting & Product Engineering Firm offering end-to-end software development solutions." />
+    <meta name="keywords" content="it services, software, development, company, firm" />
+    <link rel="shortcut icon" href="images/small-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="preload stylesheet" href="css/all.css?<?php echo time(); ?>" as="style">
+    <link rel="preload stylesheet" href="css/style.css?<?php echo time(); ?>" as="style">
+    <style>
+    ul.phone-boxes  li a{color:#bbbbbb; text-decoration:none;}
+    ul.phone-boxes  li a:hover{text-decoration:underline;}
+    </style>
+</head>
+<body class="<?php echo ( isMobile() ) ? ' mobile-tpl' : ' desktop-tpl'; ?>">
+
+    <header class="header">
+        <div class="container">
+            <div class="heder-inner">
+                <div class="logo">
+                    <a href="https://www.vinove.com">
+                        <picture>
+                            <source type="image/webp" srcset="images/logo.webp">
+                            <source type="image/png" srcset="images/logo.png">
+                            <img loading="lazy" width="400" height="114" src="images/logo.png"
+                                alt="Vinove Logo">
+                        </picture>                     
+                    </a>
+                </div>
+                <div class="push-left">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                      <span class="hamburger-line hamburger-line-top"></span>
+                      <span class="hamburger-line hamburger-line-middle"></span>
+                      <span class="hamburger-line hamburger-line-bottom"></span>
+                    </button>
+                    <div class="nav">
+                        <nav>
+                            <ul id="primary-menu" class="menu nav-menu">
+                                <!-- <li class="menu-item current-menu-item"><a href="/betasite/">Home</a></li> -->
+                                <li class="menu-item"><a href="/about-us">About Us</a></li>
+                                <li class="menu-item"><a href="/our-products-services">Our Products</a></li>
+                                <li class="menu-item"><a href="/careers">Careers</a></li>
+                                <li class="menu-item"><a href="/mindscape/">Blog</a></li>
+                                <li class="menu-item"><a href="/contact-us">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact us -->
+    <section class="contact-us-section">
+        <div class="container">
+            <div class="contact-us-outer">
+                <div class="head text-center">
+                    <h2>Get in Touch</h2>
+                    <div class="call-box">
+                        <span>For open positions and job applications, please visit the <a href="https://www.vinove.com/careers">Careers</a> section<br>
+                        For other inquiries, please use the form below.</span>
+                    </div>
+                </div>
+                <div class="form-box-outer">
+                    <form action="https://www.vinove.com/contact-us" class="checkout-form" method="post" id="contactform" enctype="multipart/form-data">
+                        <div class="form-inner">
+                            <div class="form-text-cont">
+                            <div class="user-input">
+                                <label>Full Name*</label>
+                                <input type="text" pattern="^[a-zA-Z0-9-]" placeholder="Enter your full name" class="input-field" value="" onfocus="if (this.value == this.defaultValue) 
+                                    this.value = '';" onblur="if (this.value == '') 
+                                    this.value = this.defaultValue;" name="cont_name" required />
+                            </div>
+                            </div>
+
+                            <div class="form-text-cont">
+                            <div class="user-input">
+                                <label>Email Address*</label>
+                                <input type="text" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$" placeholder="Enter your email address" class="input-field" value="" onfocus="if (this.value == this.defaultValue)
+                                    this.value = '';" onblur="if (this.value == '')
+                                    this.value = this.defaultValue;" name="cont_email" />
+                            </div>
+                            </div>
+                            <div class="form-text-cont">
+                            <div class="user-input">
+                                <label>Phone no*</label>
+                                <input type="text" class="input-field" placeholder="Enter your Phone" value="" onfocus="if (this.value == this.defaultValue)
+                                    this.value = '';" onblur="if (this.value == '')
+                                    this.value = this.defaultValue;" name="cont_phpne" required />
+                            </div>
+                            </div>
+                            <div class="form-text-cont">
+                            <div class="user-input">
+                                <label>Country</label>
+                                <input class="input-field input-skype" type="text" placeholder="Enter your country" onfocus="if (this.value == this.defaultValue)
+                                    this.value = '';" onblur="if (this.value == '')
+                                    this.value = this.defaultValue;" value="" name="cont_country" />
+                            </div>
+                            </div>
+
+                            <div class="form-text-cont width-full">
+                            <div class="user-input width-full">
+                                <label>Requirement</label>
+                                <textarea class="input-field comment-input" placeholder="Enter your requirement" onfocus="if (this.value == this.defaultValue)
+                                    this.value = '';" onblur="if (this.value == '')
+                                    this.value = this.defaultValue;" name="texteareacostm"></textarea>
+                                <!-- <div class="drop-input attachment_brw">
+                                    <a href="javascript:void(0);" class="drop-box">BROWSE | DROP FILES HERE</a>
+                                    <input type="file" name="upl" class="input-file" style="display:none;" />
+                                </div> -->
+                                <div class="drop-input attachment_brw" id="uploadcontact" >
+                                <div id="dropcontact">
+                                <a href="javascript:void(0);" class="drop-box">BROWSE | DROP FILES HERE</a>
+                                <input type="file" name="upl"  style="display:none;" />
+                                </div>
+                                <ul>
+                                </ul>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="note">
+                                <p>Note : We Respect Your Privacy! Your details will never be shared with anyone for marketing purposes.</p>
+                            </div>
+                        </div>
+                        <div class="user-input checkout">
+                            <input type="hidden" name="capthatxt" id="capthatxt" value="" />
+                            <input type="hidden" name="frmOrderFileUploadedfilename" id="frmOrderFileUploadedfilename" value="" />
+                            <input type="hidden" name="_frmOrder" value="frmOrder" /> 
+                            <input type="hidden" name="job_title" value="<?php echo $job_title;?>" />
+                            <input type="hidden" name="job_apply" value="<?php echo $job_apply;?>" />
+                            <input type="hidden" name="frmHiddenContactForm" value="Yes" />
+                            <input type="submit" id="submitButton" class="checkout-submit" value="send your request" />
+                        </div>
+                    </form>
+                    
+                    <script src="https://www.google.com/recaptcha/api.js?render=6LeUGBkgAAAAAAwWPLl3KXUe7I-_rmFdL2Dk301v"></script>
+                    <script>
+                        grecaptcha.ready(function() {
+                            grecaptcha.execute('6LeUGBkgAAAAAAwWPLl3KXUe7I-_rmFdL2Dk301v', {action: 'contact'}).then(function(token) {
+                                // pass the token to the backend script for verification
+                                // add token to form
+                                
+                                $('#contactform').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                            });
+                        });
+                    </script>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <div class="container">
+                <ul class="phone-boxes">
+                    <li>
+                       <h6>EMAIL</h6>
+                       <a href="mailto:sales@vinove.com">sales@vinove.com</a>
+                    </li>
+                    <li>
+                        <h6>WHATSAPP</h6>
+                        <a href="https://wa.me/917042020782">+91 704 202 0782</a>
+                     </li>
+                     <li>
+                        <h6>India</h6>
+                        <a href="tel:+917042020782">+91 704 202 0782</a>
+                     </li>
+                 </ul>
+                <div class="contact-us-outer">
+                    <p><span class="icon"><i class="fal fa-map-marker-alt"></i></span> <strong>Gurugram :</strong> 2nd Floor, 55P, Sector 44, Gurugram 122003, Haryana</p>
+                    <p><span class="icon"><i class="fal fa-map-marker-alt"></i></span> <strong>Noida :</strong> 3rd Floor, Fusion Square, 5A &amp; 5B, Sector 126, Noida 201303</p>
+                    <p><span class="icon"><i class="fal fa-map-marker-alt"></i></span> <strong>Mohali :</strong> Bestech Business Tower, B- 4th floor 401, Sahibzada Ajit Singh Nagar, Punjab 160062</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="left-footer">
+                    <p>Copyright © <?php echo date("Y"); ?> Vinove. All rights reserved.</p>
+                    <span class="follow-link">
+                        <a href="https://www.instagram.com/vinove_softwares"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Vinove"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/vinove"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/vinove/"><i class="fab fa-linkedin-in"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.ui.widget.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script src="js/scriptcontact.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script>
+var displayTab = 'c';
+function DrawCaptcha() {
+    var a = Math.ceil(Math.random() * 9) + '';
+    var b = Math.ceil(Math.random() * 9) + '';
+    var c = Math.ceil(Math.random() * 9) + '';
+    var d = Math.ceil(Math.random() * 9) + '';
+    var e = Math.ceil(Math.random() * 9) + '';
+    var f = Math.ceil(Math.random() * 9) + '';
+    var g = Math.ceil(Math.random() * 9) + '';
+    var code = a + ' ' + b + ' ' + c + ' ' + d + ' ' + e;
+    // alert(code);
+    $("#txtCaptcha").html(code);
+    var strcapthca = code.replace(/\s+/g, '')
+    $("#capthatxt").val(strcapthca);
+}
+$(document).ready(function() {
+    $.validator.addMethod('customphone', function(value, element) {
+    //return this.optional(element) || /^\d{3}-\d{3}-\d{4}$/.test(value);
+    return this.optional(element) || /^[0123456789().+-]+$/.test(value);
+        
+    }, "Please enter a valid phone number");
+
+    $.validator.addMethod('customname', function(value, element) {
+    return this.optional(element) || /^[a-zA-Z0-9-]/.test(value) ;
+    //return this.optional(element) || /^[a-z]+$/i.test(value);
+    }, "Please enter a valid Name");
+
+    $('#contactform').validate({
+        rules: {
+            cont_name: { 
+                customname: true,
+                required: true
+            },
+            cont_email: {
+                required: true,
+                email: true
+            },
+            //cont_email: {required: true},
+            cont_phpne: {
+                  customphone: true,
+                required: true
+            },                        
+            inquey_type: {required: true}
+        },
+        messages: {
+            cont_name: {required: "This field is required."},
+            //cont_email: {required: "Select email"},
+            cont_email: {
+                required: "This field is required.",
+                email: "Enter Valid Email."
+            },
+            cont_phpne: {required: "This field is required.",
+                // customphone: "dsaddsfdsf"
+            },                        
+            inquey_type: {required: "This field is required."}
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element.parent("div"));
+        }
+    });
+}); // doc Ready Function
+</script>
+</body>
+</html>

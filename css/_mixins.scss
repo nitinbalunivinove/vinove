@@ -1,0 +1,63 @@
+//transition css
+
+@mixin transition-all($all-duration) {
+    transition: $all-duration;
+    -webkit-transition: $all-duration;
+    -moz-transition: $all-duration;
+    -ms-transition: $all-duration;
+    -o-transition: $all-duration;
+}
+
+// border radius
+@mixin border-radius($r) {
+  border-radius: $r;
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -ms-border-radius: $r;
+  -o-border-radius: $r;
+}
+
+// Flexbox display
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// content clear both
+@mixin clear-both {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+// google fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@mixin font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+// flex box content alignment
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+  } @else if $value == flex-end {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+  } @else if $value == space-between {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+  } @else if $value == space-around {
+      -ms-flex-pack: distribute;        
+  } @else {
+      -webkit-box-pack: $value;
+      -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  justify-content: $value;
+}
