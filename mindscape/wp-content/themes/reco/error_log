@@ -1,0 +1,44 @@
+[03-Aug-2020 18:42:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[04-Aug-2020 19:14:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[06-Aug-2020 00:10:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[07-Aug-2020 04:47:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[09-Oct-2020 08:08:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[10-Oct-2020 09:15:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[11-Oct-2020 11:09:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[23-Oct-2020 02:31:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[15-Jan-2021 20:13:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/index.php on line 1
+[22-May-2021 03:54:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/404.php on line 1
+[23-May-2021 03:32:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/techieapps/public_html/wp-content/themes/reco/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/techieapps/public_html/wp-content/themes/reco/404.php on line 1
